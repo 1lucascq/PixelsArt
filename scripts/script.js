@@ -1,4 +1,7 @@
 /* eslint-disable max-lines */
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable complexity */
+/* eslint-disable max-lines-per-function */
 const pixelBoard = document.querySelector('#pixel-board');
 const pixelBoardPrevState = [];
 
@@ -194,6 +197,12 @@ function deleteBoard() {
   }
 }
 
+function checkPreviousColor(id) {
+  const pixelHistory = pixelBoardPrevState.find(({ pixel }) => pixel === id);
+  if (!pixelHistory) return false;
+  return pixelHistory.newColor;
+}
+
 const inputBoardSize = document.querySelector('#board-size');
 function createNewBoard() {
   deleteBoard();
@@ -205,10 +214,12 @@ function createNewBoard() {
     for (let j = 0; j < boardSize; j += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
-      pixel.dataset.backgroundColor = '#FFFFFF';
+      pixel.id = `p${i}-${j}`;
+      const previousBg = checkPreviousColor(pixel.id);
+      pixel.dataset.backgroundColor = previousBg || '#FFFFFF';
+      pixel.style.backgroundColor = previousBg || '#FFFFFF';
       pixel.dataset.x = i;
       pixel.dataset.y = j;
-      pixel.id = `p${i}-${j}`;
       pixel.addEventListener('click', mainAction);
       pixel.addEventListener('mouseover', mouseDownPaint);
       pixelBoard.appendChild(pixel);
