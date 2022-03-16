@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 const pixelBoard = document.querySelector('#pixel-board');
 const pixelBoardPrevState = [];
 
@@ -49,7 +50,8 @@ function goBack() {
     pixelBoardIndex = pixelBoardIndex === 0 ? 0 : pixelBoardIndex - 1;
     return '';
   }
-
+  console.log(pixel);
+  console.log(color);
   const pixelToChange = document.querySelector(`#${pixel}`);
   pixelToChange.style.backgroundColor = color;
   pixelBoardIndex = pixelBoardIndex === 0 ? 0 : pixelBoardIndex - 1;
@@ -203,6 +205,10 @@ function createNewBoard() {
     for (let j = 0; j < boardSize; j += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
+      pixel.dataset.backgroundColor = '#FFFFFF';
+      pixel.dataset.x = i;
+      pixel.dataset.y = j;
+      pixel.id = `p${i}-${j}`;
       pixel.addEventListener('click', mainAction);
       pixel.addEventListener('mouseover', mouseDownPaint);
       pixelBoard.appendChild(pixel);
