@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixels Art</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title">Pixels Art</h1>
+    </header>
+
+    <section class="main-section">
+      
+      <section id="color-palette">
+        <div class="color" id="black"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+      </section>
+
+      <section class="buttons-section">
+        <button id="clear-board">Clean</button>
+        <input
+          type="number"
+          id="board-size"
+          placeholder="Pixels"
+          min="5"
+          max="30"
+        />
+        <button type="submit" id="generate-board">Resize</button>
+        <div class="container">
+          <input
+            class="color-picker"
+            type="image"
+            alt="color picker button"
+            src="assets/color-palette-paint-svgrepo-com.svg"
+          />
+        </div>
+      </section>
+
+      <main class="main-content">
+        <aside class="tools">
+          <input
+            id="paint-brush"
+            class="tool"
+            type="image"
+            alt="paint brush selector"
+            src="assets/paint-brush.png"
+          />
+
+          <input
+            id="eraser"
+            class="tool"
+            type="image"
+            alt="eraser selector"
+            src="assets/eraser.png"
+          />
+
+          <input
+            id="paint-bucket"
+            class="tool"
+            type="image"
+            alt="paint bucket selector"
+            src="assets/paint-bucket.png"
+          />
+
+          <input
+            id="back"
+            type="image"
+            alt="paint bucket selector"
+            src="assets/arrow.png"
+          />
+
+          <input
+          id="forward"
+          type="image"
+          alt="paint bucket selector"
+          src="assets/arrow.png"
+        />
+
+
+          <!-- <button id="back">volta</button>
+          <button id="forward">evai</button> -->
+
+        </aside>
+
+        <section id="pixel-board"></section>
+
+        <section class="img-container">
+          <section class="palette">
+            <div class="color c-one"></div>
+            <div class="color c-two"></div>
+            <div class="color c-three"></div>
+            <div class="color c-four"></div>
+            <div class="color c-five"></div>
+            <input
+              class="color-picker cp-big-screens"
+              type="image"
+              alt="color picker button"
+              src="assets/color-palette-paint-svgrepo-com.svg"
+            />
+          </section>
+        </section>
+      </main>
+    
+    </section>
+
+    <footer>
+      <section class="footer-section">Nenhum direito reservado</section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/pickrFunctions.js"></script>
+  </body>
+</html>
