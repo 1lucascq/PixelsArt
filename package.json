@@ -15,12 +15,13 @@
     "mochawesome-report-generator": "4.1.0"
   },
   "scripts": {
-    "start": "node index.html",
+    "start": "node server.js",
     "test": "-----------",
     "lint": "eslint --no-inline-config --ext .js,.jsx --no-error-on-unmatched-pattern -c .eslintrc.json .",
     "lint:styles": "stylelint **/*.css --config .stylelintrc.json --ignore-disables --allow-empty-input"
   },
   "dependencies": {
-    "eslint-config-trybe-fundamentals": "1.1.0"
+    "eslint-config-trybe-fundamentals": "1.1.0",
+    "express": "^4.17.3"
   }
 }
