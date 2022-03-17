@@ -53,8 +53,6 @@ function goBack() {
     pixelBoardIndex = pixelBoardIndex === 0 ? 0 : pixelBoardIndex - 1;
     return '';
   }
-  console.log(pixel);
-  console.log(color);
   const pixelToChange = document.querySelector(`#${pixel}`);
   pixelToChange.style.backgroundColor = color;
   pixelBoardIndex = pixelBoardIndex === 0 ? 0 : pixelBoardIndex - 1;
@@ -115,7 +113,6 @@ function usePaintBucket(selectedColor) {
     }
     pixelBoardPrevState[pixelBoardIndex - 1].wasPaintBucket = true;
     pixelBoardPrevState[pixelBoardIndex - 1].pixel = pixelsState;
-    console.log(pixelBoardPrevState[pixelBoardIndex - 1]);
   }
 }
 
