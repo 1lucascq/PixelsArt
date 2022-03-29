@@ -13,7 +13,7 @@
 }
 
 body {
-  background: radial-gradient(circle at 80% 50%, #ff0000, #222222);
+  background: radial-gradient(circle at 80% 30%, rgba(137, 144, 223, 0.95), rgb(34, 34, 34));
   width: 100%;
 }
 
@@ -43,7 +43,7 @@ button:hover {
 
 header {
   background-color: #0f0e17;
-  color: #7f5af0;
+  color: rgba(137, 144, 223, 0.95);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,21 +69,18 @@ main {
 
 footer {
   display: flex;
-  /* margin-top: auto; */
   font-family: 'Nokia-Pixelated', 'Montserrat', sans-serif;
-  height: 5vh;
 }
 
 footer>.footer-section {
   background-color: #0f0e17;
-  color: #7f5af0;
+  color: rgba(137, 144, 223, 0.95);
   font-size: 1.2rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
   padding: 1rem;
-  margin-top: 8vh;
 }
 
 #board-size {
@@ -109,7 +106,7 @@ footer>.footer-section {
   align-items: center;
   align-self: center;
   font-size: 90px;
-  margin: 3vh 6vw;
+  margin: 1vh 6vw;
 }
 
 #black {
@@ -244,8 +241,8 @@ input.selected-tool {
 .buttons-section {
   display: flex;
   justify-content: center;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 3.8vh;
+  margin-bottom: 3.8vh;
   margin-right: 1.5vw;  
   gap: 1vw;
 }
@@ -308,9 +305,6 @@ input.selected-tool {
 
   .buttons-section>button {
     padding: 0.5rem;
-    /* width: 4rem; */
-    /* font-size: small; */
-    /* font-weight: 100; */
     font-family: 'Nokia-Pixelated', 'Montserrat', sans-serif;
   }
 
