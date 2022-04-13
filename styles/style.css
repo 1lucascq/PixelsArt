@@ -296,18 +296,31 @@ input.selected-tool {
 }
 
 @media only screen and (max-width: 1199px) {
+  header>#title {
+    font-size: 2.5rem;
+  }
+  
+  .main-section {
+    margin: 0;
+  }
+
+  .main-content {
+    margin: 0;
+  }
+
   .palette {
     display: none;
   }
 
   .color {
-    width: 4rem;
+    width: 2em;
+    height: 2em;
     aspect-ratio: 1;
   }
 
   .buttons-section {
-    gap: 8vw;
-    margin-right: 0vw;
+    gap: .7em;
+    margin-left: -1em;
   }
 
   .buttons-section>button {
@@ -328,11 +341,12 @@ input.selected-tool {
     order: 1;
     flex-direction: row;
     align-self: center;
-    gap: 14vw;
+    gap: .8em;
     width: 100%;
     max-width: 80%;
     padding: 0;
     margin: 2vh 0;
+    flex-wrap: wrap;
   }
 
   footer>.footer-section {
