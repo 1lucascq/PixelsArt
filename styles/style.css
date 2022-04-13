@@ -345,7 +345,7 @@ input.selected-tool {
     order: 1;
     flex-direction: row;
     align-self: center;
-    gap: .8em;
+    gap: 1em;
     width: 75%;
     max-width: 80%;
     padding: 0;
