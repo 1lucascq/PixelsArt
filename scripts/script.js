@@ -148,7 +148,9 @@ function mouseDownPaint(e) {
 }
 
 function createBoard() {
-  const DEFAULT_BOARDSIZE = 10;
+  const isSmallScreen = window.screen.availWidth < 700;
+  const DEFAULT_BOARDSIZE = isSmallScreen ? 8 : 10;
+
   pixelBoard.style.gridTemplateColumns = `repeat(${DEFAULT_BOARDSIZE}, 40px)`;
   for (let x = 0; x < DEFAULT_BOARDSIZE; x += 1) {
     for (let y = 0; y < DEFAULT_BOARDSIZE; y += 1) {

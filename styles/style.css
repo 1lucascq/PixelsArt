@@ -342,11 +342,15 @@ input.selected-tool {
     flex-direction: row;
     align-self: center;
     gap: .8em;
-    width: 100%;
+    width: 75%;
     max-width: 80%;
     padding: 0;
-    margin: 2vh 0;
+    margin: 1em 0;
     flex-wrap: wrap;
+  }
+
+  footer {
+    margin-top: 0;
   }
 
   footer>.footer-section {
