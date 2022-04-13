@@ -115,7 +115,7 @@ palettePickr.on('save', (color) => {
     ${personalizedColor}, #222222)`;
   const title = document.querySelector('#title');
   title.style.color = personalizedColor;
-  const footer = document.querySelector('.footer-section');
+  const footer = document.querySelector('.footer-link');
   footer.style.color = personalizedColor;
 });
 
