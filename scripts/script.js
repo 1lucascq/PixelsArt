@@ -207,7 +207,7 @@ function createNewBoard() {
   deleteBoard();
   let boardSize = inputBoardSize.value;
   if (inputBoardSize.value < 5) { boardSize = 5; }
-  if (inputBoardSize.value > 50) { boardSize = 50; }
+  if (inputBoardSize.value > 30) { boardSize = 30; }
   pixelBoard.style.gridTemplateColumns = `repeat(${boardSize}, 40px)`;
   for (let i = 0; i < boardSize; i += 1) {
     for (let j = 0; j < boardSize; j += 1) {
